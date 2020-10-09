@@ -4,14 +4,22 @@ public class Coordenada {
 
     private int x;
     private int y;
+    private String type = "Coordenada";
 
-
+    public Coordenada() { }
     public Coordenada(int x, int y) {
         super();
         this.x = x;
         this.y = y;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public int getX() {
         return x;

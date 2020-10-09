@@ -3,6 +3,8 @@ package com.example.s8cliente;
 
 
 public class Usuario {
+    private String nombre;
+    private String type = "usser";
 
 
     //CONSTRUCTOR
@@ -14,9 +16,15 @@ public class Usuario {
 
 
     //ATRIBUTOS
-    private String nombre;
 
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getNombre() {
         return nombre;
