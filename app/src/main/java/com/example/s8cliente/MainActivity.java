@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         baba = findViewById(R.id.baba);
         baba.setOnClickListener(this);
         bcolor = findViewById(R.id.bcolor);
+        bcolor.setOnClickListener(this);
 
         tcp = TCPsingleton.getInstance();
         tcp.setObserver(this);
