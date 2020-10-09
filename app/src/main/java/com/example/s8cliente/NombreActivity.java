@@ -48,6 +48,7 @@ public class NombreActivity extends AppCompatActivity implements View.OnClickLis
 
                 startActivity(i);
                 break;
+
         }
     }
     public void onMessage(String msg) {
