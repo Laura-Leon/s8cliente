@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bcolor;
     private Coordenada coor;
     private Gson gson;
+    private Color color;
 
     private TCPsingleton tcp;
-    public int x = 0,y = 0;
+    public int x = 0,y = 0,r,g,b;
 
 
 
@@ -53,7 +54,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case  R.id.bcolor:
-                tcp.sendMessage( "hello desde main");
+                r = (int)(Math.random()*255);
+                g = (int)(Math.random()*255);
+                b = (int)(Math.random()*255);
+                color = new Color (r,g,b);
+                gson = new Gson();
+                String jsoon = gson.toJson(color);
+
+                tcp.sendMessage(jsoon);
                 break;
             case R.id.bizq:
 
